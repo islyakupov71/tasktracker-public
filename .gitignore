@@ -1,0 +1,51 @@
+# Build artifacts
+/bin/
+
+# Local SQLite DB + WAL/SHM + backups, and uploaded screenshots
+/data/*.db
+/data/*.db-shm
+/data/*.db-wal
+/data/*.bak-old
+/data/uploads/
+
+# Secrets — never commit tokens. The committed example is the template.
+etc/*.env
+!etc/tasktracker.env.example
+
+# Editor / OS noise
+*.swp
+.DS_Store
+
+# Local credentials and data
+.env
+.env.*
+!.env.example
+*.env
+!*.env.example
+*.env.*
+!*env.example
+.local/
+.venv/
+venv/
+node_modules/
+**/dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+build/
+reports/
+*.log
+*.db
+*.db-*
+*.sqlite*
+*.pem
+*.key
+*credentials*.json
+secrets.toml
+.ssh/
+voices/
+private/
+render/
+*.blend
+*.blend1
+engine/out*.html

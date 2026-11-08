@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Задачник демонстрационной команды</title>
+  <!-- Self-hosted (same-origin, synchronous) so window.Telegram is guaranteed
+       ready before app.js runs and does not depend on telegram.org reachability. -->
+  <script src="telegram-web-app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="title">Задачник демонстрационной команды</div>
+    </div>
+    <div class="topbar-actions">
+      <button class="theme-btn" id="fsBtn" title="Свернуть / на весь экран">🗕</button>
+      <button class="theme-btn" id="themeBtn" title="Тема">🎨</button>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-window="new">🆕 Новые</button>
+    <button class="tab" data-window="analyst">🔍 Аналитика</button>
+    <button class="tab" data-window="impl">🛠 Реализация</button>
+    <button class="tab" data-window="done">✅ Сделано</button>
+    <button class="tab" data-window="problems">❌ Проблемы</button>
+    <button class="tab" data-window="news">💡 Факты</button>
+  </nav>
+
+  <main id="list" class="list"></main>
+
+  <button class="fab" id="addBtn" title="Добавить баг">＋</button>
+
+  <!-- Detail / edit sheet -->
+  <div class="sheet-backdrop" id="backdrop" hidden></div>
+  <section class="sheet" id="sheet" hidden></section>
+
+  <!-- New bug sheet -->
+  <section class="sheet" id="newSheet" hidden></section>
+
+  <script src="app.js"></script>
+</body>
+</html>

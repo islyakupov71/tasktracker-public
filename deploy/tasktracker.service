@@ -1,0 +1,18 @@
+[Unit]
+Description=tasktracker (Telegram bug tracker bot + Mini App)
+After=network.target
+
+[Service]
+Type=simple
+User=tasktracker
+WorkingDirectory=/opt/tasktracker
+EnvironmentFile=/opt/tasktracker/etc/tasktracker.env
+ExecStart=/opt/tasktracker/bin/tasktracker
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=tasktracker
+
+[Install]
+WantedBy=multi-user.target
